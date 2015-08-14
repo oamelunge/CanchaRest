@@ -40,4 +40,12 @@ public class MyResource {
     public Reserva roundTrip(Reserva s) {
         return new InsideRest().agregarReserva(s);
     }
+    
+    @Path("roundTrip2")
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getItNow() {
+        return "Hello, Bitch!";
+    }
+    
 }
