@@ -99,10 +99,7 @@
             <artifactId>jersey-container-servlet</artifactId>
         </dependency>
         
-        <dependency>
-  			<groupId>org.glassfish.jersey.media</groupId>
-  			<artifactId>jersey-media-json-jackson</artifactId>  		
-		</dependency>
+       
 
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -143,6 +140,12 @@
 	      <artifactId>heroku-jdbc</artifactId>
 	      <version>0.1.0</version>
 	    </dependency>
+	    
+	    
+	     <dependency>
+  			<groupId>org.glassfish.jersey.media</groupId>
+  			<artifactId>jersey-media-json-jackson</artifactId>  		
+		</dependency>
 	    </dependencies>
 
     <build>
