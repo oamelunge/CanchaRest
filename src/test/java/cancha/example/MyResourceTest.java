@@ -1,7 +1,6 @@
 package cancha.example;
 
 import java.time.LocalDate;
-
 import javax.ws.rs.core.Application;
 
 import org.glassfish.jersey.server.ResourceConfig;
@@ -10,7 +9,6 @@ import org.junit.Test;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.client.Entity;
-
 import static org.junit.Assert.assertEquals;
 import cancha.example.MyResource;
 import cancha.example.model.HoraReserva;
