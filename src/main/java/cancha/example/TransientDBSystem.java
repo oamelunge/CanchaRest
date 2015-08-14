@@ -22,16 +22,10 @@ public class TransientDBSystem implements DBSystem {
 	}
 
 	@Override
-	public CancheroSystem cancheroSystem() {
-		// TODO Auto-generated method stub
+	public CancheroSystem cancheroSystem() {	
 		return cancheroSystem;
 	}
 
-	@Override
-	public void flush() {
-		// TODO Auto-generated method stub
-		
-	}
 
 
 

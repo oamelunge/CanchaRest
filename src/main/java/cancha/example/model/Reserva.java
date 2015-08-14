@@ -2,17 +2,12 @@ package cancha.example.model;
 
 import java.time.LocalDate;
 
-import javax.persistence.Basic;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
-
-import org.hibernate.annotations.Type;
 
 
 
