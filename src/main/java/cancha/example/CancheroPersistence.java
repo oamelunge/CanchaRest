@@ -67,12 +67,14 @@ public class CancheroPersistence implements CancheroSystem {
 		else
 			return selectedReservas.get(0);
 	}
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Reserva> obtenerReservasParaUnaFecha(LocalDate fechaReservas) {
 		return session().createQuery("from Reserva r where r.fechaReserva=:fechaReserva")
 				.setParameter("fechaReserva", fechaReservas)
 				.list();
 	}
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Reserva> obtenerReservasEnUnRangoDeFecha(LocalDate fechaDesde,
 			LocalDate fechaHasta) {
