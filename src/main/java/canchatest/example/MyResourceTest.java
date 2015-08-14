@@ -1,17 +1,20 @@
 package canchatest.example;
 
 import java.time.LocalDate;
+
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.Application;
+import javax.ws.rs.core.MediaType;
 
 import org.glassfish.jersey.server.ResourceConfig;
-//import org.glassfish.jersey.test.JerseyTest;
+import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import cancha.example.MyResource;
 import cancha.example.model.HoraReserva;
 import cancha.example.model.Reserva;
-/*
+
 public class MyResourceTest extends JerseyTest {
 
 	
@@ -30,8 +33,8 @@ public class MyResourceTest extends JerseyTest {
         final String responseMsg = target().path("myresource").request().get(String.class);
 
         assertEquals("Hello, Heroku!", responseMsg);
-    }*/
-    /*
+    }
+    
     @Test
     public void testReserva() {
         //final String responseMsg = target().path("myresource").request().get(String.class);
@@ -40,8 +43,8 @@ public class MyResourceTest extends JerseyTest {
                 .post(Entity.entity(inicializarReserva(8,30,9,30), MediaType.APPLICATION_JSON_TYPE), Reserva.class);
         assertEquals(reserva, inicializarReserva(8,30,9,30));
     }
-    */
-/*	private Reserva inicializarReserva(int horaInicio, int minutoInicio, int horaFin, int minutoFin ) {
+    
+	private Reserva inicializarReserva(int horaInicio, int minutoInicio, int horaFin, int minutoFin ) {
 		_horaInicio = new HoraReserva(horaInicio,minutoInicio);
 		_horaFin = new HoraReserva(horaFin,minutoFin);
 		_descripcion = "Oscar Amelunge 75520286";
@@ -49,4 +52,4 @@ public class MyResourceTest extends JerseyTest {
 		return new Reserva(_fechaReserva,_horaInicio, _horaFin, _descripcion);
 		
 	}
-}*/
+}

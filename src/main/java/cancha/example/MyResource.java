@@ -33,7 +33,7 @@ public class MyResource {
         return "Hello, Heroku!";
     }
     
-    @Path("roudTrip")
+    @Path("roundTrip")
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
