@@ -1,4 +1,4 @@
-package canchatest.example.testdb;
+package canchatest.example;
 
 import static org.junit.Assert.*;
 
