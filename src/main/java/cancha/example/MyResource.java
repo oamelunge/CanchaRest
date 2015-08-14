@@ -1,9 +1,16 @@
 package cancha.example;
 
+import java.time.LocalDate;
+
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+
+
+import cancha.example.model.Reserva;
 
 /**
  * Root resource (exposed at "myresource" path)
@@ -21,5 +28,15 @@ public class MyResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt() {
         return "Hello, Heroku!";
+    }
+    
+    @Path("roudTrip")
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+   // @Produces("application/json")
+   // @Consumes("application/json")
+    public Reserva roundTrip(Reserva s) {
+        return new InsideRest().agregarReserva(s);
     }
 }

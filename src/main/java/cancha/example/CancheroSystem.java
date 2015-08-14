@@ -9,7 +9,7 @@ import cancha.example.model.*;
 
 public interface CancheroSystem {
 
-	public abstract void agregarReserva(Reserva reserva);
+	public abstract Reserva agregarReserva(Reserva reserva);
 	public abstract boolean contains(Reserva reserva);
 	public abstract Reserva obtenerReserva(long id);
 	public abstract List<Reserva> obtenerReservasParaUnaFecha(LocalDate fechaReservas);

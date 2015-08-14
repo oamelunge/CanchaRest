@@ -48,6 +48,7 @@ public class Reserva {
 		this.fechaReserva=_fechaReserva;
 		this.horaInicioBD=this.getHoraInicioBD();
 		this.horaFinBD=this.getHoraFinBD();
+		this.id=99;
 	}
 
 

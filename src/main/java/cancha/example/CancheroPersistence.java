@@ -24,10 +24,11 @@ public class CancheroPersistence implements CancheroSystem {
 		this.parentSystem = parentSystem;
 	}
 	@Override
-	public void agregarReserva(Reserva reserva) {
+	public Reserva agregarReserva(Reserva reserva) {
 		
 		validar(reserva);
 		session().save(reserva);
+		return reserva;
 	}
 	private void validar(Reserva reserva) {
 		for(String query: querysParaVerificarExistencia)

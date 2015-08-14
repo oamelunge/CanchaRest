@@ -19,10 +19,11 @@ public class CancheroTransient implements CancheroSystem {
 	}
 	
 	@Override
-	public void agregarReserva(Reserva reserva) {
+	public Reserva agregarReserva(Reserva reserva) {
 		if(existeAlgunaReservaEnLaMismaFecha(reserva))
 			validarHorarioDeNuevaReserva(reserva);
 		calendario.add(reserva);
+		return reserva;
 	}
 
 	private boolean existeAlgunaReservaEnLaMismaFecha(Reserva reserva) {

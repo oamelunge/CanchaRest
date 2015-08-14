@@ -30,8 +30,7 @@ public class TestCanchaFutbolPersistente {
 	
 	@Before
 	public void setUp() {
-		erpSystem = Environment.current().createDBSystem();
-		//erpSystem = new PersistentDBSystem();
+		erpSystem = Environment.current().createDBSystem();	
 		erpSystem.beginTransaction();
 		cancheroSystem = erpSystem.cancheroSystem();
 	}
