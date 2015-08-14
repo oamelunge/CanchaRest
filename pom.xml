@@ -101,8 +101,7 @@
         
         <dependency>
   			<groupId>org.glassfish.jersey.media</groupId>
-  			<artifactId>jersey-media-json-jackson</artifactId>
-  			<version>${jersey.version}</version>
+  			<artifactId>jersey-media-json-jackson</artifactId>  		
 		</dependency>
 
         <dependency>

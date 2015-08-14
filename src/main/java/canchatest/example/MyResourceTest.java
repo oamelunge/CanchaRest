@@ -7,13 +7,11 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Test;
 
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.client.Entity;
 import static org.junit.Assert.assertEquals;
 import cancha.example.MyResource;
 import cancha.example.model.HoraReserva;
 import cancha.example.model.Reserva;
-
+/*
 public class MyResourceTest extends JerseyTest {
 
 	
@@ -32,7 +30,7 @@ public class MyResourceTest extends JerseyTest {
         final String responseMsg = target().path("myresource").request().get(String.class);
 
         assertEquals("Hello, Heroku!", responseMsg);
-    }
+    }*/
     /*
     @Test
     public void testReserva() {
@@ -43,7 +41,7 @@ public class MyResourceTest extends JerseyTest {
         assertEquals(reserva, inicializarReserva(8,30,9,30));
     }
     */
-	private Reserva inicializarReserva(int horaInicio, int minutoInicio, int horaFin, int minutoFin ) {
+/*	private Reserva inicializarReserva(int horaInicio, int minutoInicio, int horaFin, int minutoFin ) {
 		_horaInicio = new HoraReserva(horaInicio,minutoInicio);
 		_horaFin = new HoraReserva(horaFin,minutoFin);
 		_descripcion = "Oscar Amelunge 75520286";
@@ -51,4 +49,4 @@ public class MyResourceTest extends JerseyTest {
 		return new Reserva(_fechaReserva,_horaInicio, _horaFin, _descripcion);
 		
 	}
-}
+}*/
