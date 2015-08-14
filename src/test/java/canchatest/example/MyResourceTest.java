@@ -1,4 +1,4 @@
-package cancha.example;
+package canchatest.example;
 
 import java.time.LocalDate;
 import javax.ws.rs.core.Application;

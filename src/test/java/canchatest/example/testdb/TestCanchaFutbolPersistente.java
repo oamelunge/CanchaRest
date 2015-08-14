@@ -1,4 +1,4 @@
-package cancha.example.testdb;
+package canchatest.example.testdb;
 
 import static org.junit.Assert.*;
 
@@ -8,12 +8,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import cancha.example.testEnviroment.Environment;
-
 import cancha.example.CancheroSystem;
 import cancha.example.DBSystem;
 import cancha.example.model.HoraReserva;
 import cancha.example.model.Reserva;
+import canchatest.example.testEnviroment.Environment;
 
 
 

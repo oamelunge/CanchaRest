@@ -1,7 +1,8 @@
 package cancha.example;
 
 import cancha.example.model.Reserva;
-import cancha.example.testEnviroment.Environment;
+import canchatest.example.testEnviroment.Environment;
+
 
 public class InsideRest {
 

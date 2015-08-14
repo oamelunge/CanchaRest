@@ -1,4 +1,4 @@
-package cancha.example;
+package canchatest.example;
 
 
 import static org.junit.Assert.assertEquals;

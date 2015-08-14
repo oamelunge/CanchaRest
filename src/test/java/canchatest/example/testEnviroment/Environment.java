@@ -1,4 +1,4 @@
-package cancha.example.testEnviroment;
+package canchatest.example.testEnviroment;
 
 import cancha.example.DBSystem;
 
