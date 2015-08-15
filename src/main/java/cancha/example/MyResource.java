@@ -32,7 +32,8 @@ public class MyResource {
     @Produces({"application/json", "application/javascript"})
     @JSONP(callback = "eval", queryParam = "jsonpCallback")
     public ReservaDTO getReservaDTO() {
-        return new ReservaDTO("jsonp","a","a","a");
+    	InsideRest ir = new InsideRest();
+    	return  ir.agregarReserva( new ReservaDTO("jsonp","a","a","a"));       
     }
         
 }
