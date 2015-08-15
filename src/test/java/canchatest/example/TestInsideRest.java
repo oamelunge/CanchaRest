@@ -13,10 +13,6 @@ import cancha.example.model.Reserva;
 
 public class TestInsideRest {
 
-	private HoraReserva _horaInicio;
-	private HoraReserva _horaFin;
-	private LocalDate _fechaReserva;
-	private String _descripcion;
 	
 	@Test
 	public void testCrearHorarioATravezDeInterfaceRest(){
