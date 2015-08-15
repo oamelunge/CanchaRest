@@ -2,6 +2,8 @@ package cancha.example;
 
 public class ReservaDTO {
 
+	public long id;
+	
 	public String horaInicio ;
 	public String horaFin;
     public String descripcion;
@@ -12,7 +14,7 @@ public class ReservaDTO {
 		
 	}
 	
-	public ReservaDTO(String horaInicio, String horaFin, String descripcion,
+	public ReservaDTO(long id,String horaInicio, String horaFin, String descripcion,
 			String fechaReserva) {
 		super();
 		this.horaInicio = horaInicio;
@@ -31,5 +33,8 @@ public class ReservaDTO {
 	}
 	public String getFechaReserva() {
 		return fechaReserva;
+	}
+	public long getId() {
+		return id;
 	}
 }

@@ -42,7 +42,7 @@ public class MyResourceTest extends JerseyTest {
    
 	private ReservaDTO inicializarReserva( ) {
 		
-		return new ReservaDTO("8:30","9:30","Oscar Amelunge 75520286","15-08-2015");
+		return new ReservaDTO(0,"8:30","9:30","Oscar Amelunge 75520286","15-08-2015");
 		
 	}
 }

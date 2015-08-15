@@ -33,7 +33,7 @@ public class MyResource {
     @JSONP(callback = "eval", queryParam = "jsonpCallback")
     public ReservaDTO getReservaDTO() {
     	InsideRest ir = new InsideRest();
-    	return  ir.agregarReserva( new ReservaDTO("8:30","9:30","Oscar Amelunge 75520286","15-08-2015"));       
+    	return  ir.agregarReserva( new ReservaDTO(0,"8:30","9:30","Oscar Amelunge 75520286","15-08-2015"));       
     }
         
 }
