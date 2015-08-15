@@ -1,9 +1,8 @@
 package canchatest.example;
 
-import java.time.LocalDate;
 
 import javax.ws.rs.client.Entity;
-import javax.ws.rs.client.WebTarget;
+
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.MediaType;
 
@@ -14,8 +13,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import cancha.example.MyResource;
 import cancha.example.ReservaDTO;
-import cancha.example.model.HoraReserva;
-import cancha.example.model.Reserva;
+
 
 
 public class MyResourceTest extends JerseyTest {
