@@ -11,8 +11,8 @@ import org.junit.Test;
 
 import cancha.example.CancheroSystem;
 import cancha.example.DBSystem;
+import cancha.example.Enviroment.Environment;
 import cancha.example.model.*;
-import canchatest.example.testEnviroment.Environment;
 
 
 public class TestCanchaFutbol{

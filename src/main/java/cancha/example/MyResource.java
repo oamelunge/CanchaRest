@@ -7,24 +7,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-
-
-
-
-import cancha.example.model.Reserva;
-
-/**
- * Root resource (exposed at "myresource" path)
- */
 @Path("myresource")
 public class MyResource {
 
-    /**
-     * Method handling HTTP GET requests. The returned object will be sent
-     * to the client as "text/plain" media type.
-     *
-     * @return String that will be returned as a text/plain response.
-     */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt() {
@@ -34,18 +19,10 @@ public class MyResource {
     @Path("roundTrip")
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
-   // @Produces("application/json")
-   // @Consumes("application/json")
-    public Reserva roundTrip(Reserva s) {
-        return new InsideRest().agregarReserva(s);
+    @Consumes(MediaType.APPLICATION_JSON)  
+    public ReservaDTO roundTrip(ReservaDTO reservaDTO) {
+    	InsideRest ir = new InsideRest();
+    	return  ir.agregarReserva(reservaDTO);
     }
-    
-    @Path("roundTrip2")
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getItNow() {
-        return "Hello, Bitch!";
-    }
-    
+        
 }

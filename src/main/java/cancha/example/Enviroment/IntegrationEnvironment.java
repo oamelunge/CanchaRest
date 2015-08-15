@@ -1,4 +1,4 @@
-package canchatest.example.testEnviroment;
+package cancha.example.Enviroment;
 
 import java.io.File;
 

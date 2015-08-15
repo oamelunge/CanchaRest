@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import org.junit.Test;
 
 import cancha.example.InsideRest;
+import cancha.example.ReservaDTO;
 import cancha.example.model.HoraReserva;
 import cancha.example.model.Reserva;
 
@@ -21,16 +22,13 @@ public class TestInsideRest {
 	public void testCrearHorarioATravezDeInterfaceRest(){
 	
 		InsideRest inside = new InsideRest();		
-		assertTrue(inside.agregarReserva(inicializarReserva(8,30,9,30)).getId()>0);
+		assertEquals(inside.agregarReserva(inicializarReserva()).descripcion,inicializarReserva().getDescripcion());
 		
 	}
 	
-	private Reserva inicializarReserva(int horaInicio, int minutoInicio, int horaFin, int minutoFin ) {
-		_horaInicio = new HoraReserva(horaInicio,minutoInicio);
-		_horaFin = new HoraReserva(horaFin,minutoFin);
-		_descripcion = "Oscar Amelunge 75520286";
-		_fechaReserva = LocalDate.now();
-		return new Reserva(_fechaReserva,_horaInicio, _horaFin, _descripcion);
+private ReservaDTO inicializarReserva( ) {
+		
+		return new ReservaDTO("8:30","9:30","Oscar Amelunge 75520286","15-08-2015");
 		
 	}
 }

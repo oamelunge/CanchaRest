@@ -8,15 +8,34 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlRootElement;
 
 
 
 
-
+@XmlRootElement
 @Entity
 @Table( name = "RESERVA" )
 public class Reserva {
 
+
+
+
+	public HoraReserva getHoraInicio() {
+		return horaInicio;
+	}
+
+	public HoraReserva getHoraFin() {
+		return horaFin;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public LocalDate getFechaReserva() {
+		return fechaReserva;
+	}
 
 
 
@@ -33,7 +52,10 @@ public class Reserva {
 	private String horaInicioBD;
 	private String horaFinBD;
 	
-	
+	public Reserva()
+	{
+		
+	}
 
 	public Reserva(LocalDate _fechaReserva, HoraReserva _horaInicio, HoraReserva _horaFin, String _descripcion) {
 		validarHorarios(_horaInicio, _horaFin);
