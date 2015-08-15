@@ -78,7 +78,7 @@ public class Reserva {
 	}
 
 	public long getId() {
-		return id;
+		return 99;
 	}
 
 	
