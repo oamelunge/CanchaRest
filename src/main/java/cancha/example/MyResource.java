@@ -7,6 +7,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.glassfish.jersey.server.JSONP;
+
 @Path("myresource")
 public class MyResource {
 
@@ -23,6 +25,14 @@ public class MyResource {
     public ReservaDTO roundTrip(ReservaDTO reservaDTO) {
     	InsideRest ir = new InsideRest();
     	return  ir.agregarReserva(reservaDTO);
+    }
+    
+    @Path("test")
+    @GET
+    @Produces({"application/json", "application/javascript"})
+    @JSONP(callback = "eval", queryParam = "jsonpCallback")
+    public ReservaDTO getReservaDTO() {
+        return new ReservaDTO("jsonp","a","a","a");
     }
         
 }
