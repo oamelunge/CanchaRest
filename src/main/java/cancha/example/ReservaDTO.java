@@ -17,6 +17,7 @@ public class ReservaDTO {
 	public ReservaDTO(long id,String horaInicio, String horaFin, String descripcion,
 			String fechaReserva) {
 		super();
+		this.id=id;
 		this.horaInicio = horaInicio;
 		this.horaFin = horaFin;
 		this.descripcion = descripcion;
