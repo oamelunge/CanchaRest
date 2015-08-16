@@ -19,7 +19,7 @@ public class MyResource {
     }
     
     @Path("roundTrip")
-    @POST
+    @GET
     //@Produces(MediaType.APPLICATION_JSON)
     @Produces({"application/json", "application/javascript"})
     //@Consumes(MediaType.APPLICATION_JSON)  
