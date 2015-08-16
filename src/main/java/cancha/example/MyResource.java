@@ -20,8 +20,11 @@ public class MyResource {
     
     @Path("roundTrip")
     @POST
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)  
+    //@Produces(MediaType.APPLICATION_JSON)
+    @Produces({"application/json", "application/javascript"})
+    //@Consumes(MediaType.APPLICATION_JSON)  
+    @Consumes({"application/json", "application/javascript"})
+    @JSONP(callback = "eval", queryParam = "jsonpCallback")
     public ReservaDTO roundTrip(ReservaDTO reservaDTO) {
     	InsideRest ir = new InsideRest();
     	return  ir.agregarReserva(reservaDTO);

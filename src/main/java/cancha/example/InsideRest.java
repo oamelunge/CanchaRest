@@ -35,7 +35,7 @@ public class InsideRest {
 		
 		Reserva r = new Reserva(fechaReserva,horaInicio,horaFin,descripcion);
 		cancheroSystem.agregarReserva(r);
-		ReservaDTO rdto= new ReservaDTO(33,r.getHoraInicioBD()+"ADR", r.getHoraFinBD(), r.getDescripcion(), r.getFechaReserva().toString());
+		ReservaDTO rdto= new ReservaDTO(r.getId(),r.getHoraInicioBD()+"ADR", r.getHoraFinBD(), r.getDescripcion(), r.getFechaReserva().toString());
 		 return rdto;
 	}
 
