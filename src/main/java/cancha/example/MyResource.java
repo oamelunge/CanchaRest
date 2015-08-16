@@ -18,13 +18,11 @@ public class MyResource {
         return "Hello, Heroku!";
     }
     
+   
+    @POST
     @Path("roundTrip")
-    @GET
-    //@Produces(MediaType.APPLICATION_JSON)
-    @Produces({"application/json", "application/javascript"})
-    //@Consumes(MediaType.APPLICATION_JSON)  
-    @Consumes({"application/json", "application/javascript"})
-    @JSONP(callback = "eval", queryParam = "jsonpCallback")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)  
     public ReservaDTO roundTrip(ReservaDTO reservaDTO) {
     	InsideRest ir = new InsideRest();
     	return  ir.agregarReserva(reservaDTO);
