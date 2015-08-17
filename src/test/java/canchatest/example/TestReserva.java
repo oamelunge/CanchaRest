@@ -19,10 +19,9 @@ public class TestReserva {
 	@Test
 	public void testReservaDebeTenerUnaHoradeInicioyUnaHoraFin() {
 		inicializarReserva(8,30,9,30);
-		assertEquals(_horaInicio,_reserva.obtenerHoraInicio());
-		assertEquals(_horaFin,_reserva.obtenerHoraFin());
+		assertEquals(_horaInicio,_reserva.getHoraInicio());
+		assertEquals(_horaFin,_reserva.getHoraFin());
 	}
-	
 	@Test
 	public void testHorarioDeHoraDeInicioDebeSerMenorAHorarioHoraFin() {
 		

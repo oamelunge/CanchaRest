@@ -26,10 +26,6 @@ public class CancheroTransient implements CancheroSystem {
 		return reserva;
 	}
 
-	private boolean existeAlgunaReservaEnLaMismaFecha(Reserva reserva) {
-		return calendario.stream().anyMatch(r-> r.obtenerFechaReserva().equals(reserva.obtenerFechaReserva()));
-	}
-
 	private void validarHorarioDeNuevaReserva(Reserva reserva) {
 		if(seIntentaReservarEnUnHorarioOcupado(reserva))
 			throw new RuntimeException("La hora de reserva ya esta ocupada");
@@ -37,13 +33,16 @@ public class CancheroTransient implements CancheroSystem {
 			throw new RuntimeException("La hora de reserva ya esta ocupada");
 	}
 
+	private boolean existeAlgunaReservaEnLaMismaFecha(Reserva reserva) {
+		return calendario.stream().anyMatch(r-> r.obtenerFechaReserva().equals(reserva.obtenerFechaReserva()));
+	}
 	private boolean seIntentaReservarAMitadDeUnHorarioOcupado(Reserva reserva) {
-		return calendario.stream().anyMatch(r-> reserva.obtenerHoraInicio().horaMilitar() >= r.obtenerHoraInicio().horaMilitar()
-				                      && reserva.obtenerHoraInicio().horaMilitar() < r.obtenerHoraFin().horaMilitar());
+		return calendario.stream().anyMatch(r-> reserva.getHoraInicio().horaMilitar() >= r.getHoraInicio().horaMilitar()
+				                      && reserva.getHoraInicio().horaMilitar() < r.getHoraFin().horaMilitar());
 	}
 
 	private boolean seIntentaReservarEnUnHorarioOcupado(Reserva reserva) {
-		return calendario.stream().anyMatch(r->r.obtenerHoraInicio().horaMilitar()==reserva.obtenerHoraInicio().horaMilitar());
+		return calendario.stream().anyMatch(r->r.getHoraInicio().horaMilitar()==reserva.getHoraInicio().horaMilitar());
 	}
 
 	@Override

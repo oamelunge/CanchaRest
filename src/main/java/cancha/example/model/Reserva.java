@@ -18,27 +18,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table( name = "RESERVA" )
 public class Reserva {
 
-
-
-
-	public HoraReserva getHoraInicio() {
-		return horaInicio;
-	}
-
-	public HoraReserva getHoraFin() {
-		return horaFin;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public LocalDate getFechaReserva() {
-		return fechaReserva;
-	}
-
-
-
 	@Id
 	@GeneratedValue
 	protected long id;
@@ -83,35 +62,35 @@ public class Reserva {
 
 	
 	public String getHoraInicioBD() {
-		return Integer.toString(this.obtenerHoraInicio().horaMilitar());
+		return Integer.toString(this.getHoraInicio().horaMilitar());
 	}
-
-
 
 	public String getHoraFinBD() {
-		return Integer.toString(this.obtenerHoraFin().horaMilitar());
+		return Integer.toString(this.getHoraFin().horaMilitar());
 	}
-
-	public HoraReserva obtenerHoraInicio() {
-		return this.horaInicio;
-	}
-
-
-
-	public HoraReserva obtenerHoraFin() {
-		return this.horaFin;
-	}
-
-
 
 	public String obtenerDescripcion() {
 		return this.descripcion;
 	}
 
-
-
 	public LocalDate obtenerFechaReserva() {
 		return this.fechaReserva;
+	}
+	
+	public HoraReserva getHoraInicio() {
+		return horaInicio;
+	}
+
+	public HoraReserva getHoraFin() {
+		return horaFin;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public LocalDate getFechaReserva() {
+		return fechaReserva;
 	}
 
 }

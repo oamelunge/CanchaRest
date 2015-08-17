@@ -39,7 +39,7 @@ public class CancheroPersistence implements CancheroSystem {
 		@SuppressWarnings("unchecked")
 		List<Reserva> selectedReservas=session().createQuery(queryString)
 				.setParameter("fechaReserva", reserva.obtenerFechaReserva())
-				.setParameter("horaInicio", reserva.obtenerHoraInicio().horaMilitar()).list();
+				.setParameter("horaInicio", reserva.getHoraInicio().horaMilitar()).list();
 		
 		if (selectedReservas.size()>0)
 			throw new RuntimeException(ERROR_HORA_RESERVA_OCUPADA);

@@ -22,8 +22,7 @@ public class PersistentDBSystem implements DBSystem {
 
 	    session = sessionFactory.openSession();
 	    
-	    cancheroSystem = new CancheroPersistence(this);
-			
+	    cancheroSystem = new CancheroPersistence(this);			
 	}
 	
 	
@@ -31,8 +30,6 @@ public class PersistentDBSystem implements DBSystem {
 	public CancheroSystem cancheroSystem() {	
 		return cancheroSystem;
 	}
-
-
 
 	public void beginTransaction() {
 		session.beginTransaction();
