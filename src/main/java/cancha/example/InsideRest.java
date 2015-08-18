@@ -40,10 +40,14 @@ public class InsideRest {
 			Reserva r = new Reserva(fechaReserva,horaInicio,horaFin,descripcion);
 			cancheroSystem.agregarReserva(r);
 			ReservaDTO rdto= new ReservaDTO(r.getId(),r.getHoraInicioBD(), r.getHoraFinBD(), r.getDescripcion(), r.getFechaReserva().toString());
-			 return rdto;
+			return rdto;
 		} catch (Exception e) {
 			throw new AppException(Response.Status.INTERNAL_SERVER_ERROR.getStatusCode(),500,"Error Al Agregar reserva",e.getStackTrace().toString(),"aa");
-		}		
+		}
+		finally{
+			erpSystem.commit();
+			erpSystem.close();
+		}
 		
 	}
 
