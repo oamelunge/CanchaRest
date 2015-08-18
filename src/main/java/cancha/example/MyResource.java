@@ -9,6 +9,9 @@ import javax.ws.rs.core.MediaType;
 
 import org.glassfish.jersey.server.JSONP;
 
+import cancha.example.heroku.AppException;
+
+
 @Path("myresource")
 public class MyResource {
 
@@ -23,7 +26,7 @@ public class MyResource {
     @Path("roundTrip")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)  
-    public ReservaDTO roundTrip(ReservaDTO reservaDTO) {
+    public ReservaDTO roundTrip(ReservaDTO reservaDTO) throws AppException {
     	InsideRest ir = new InsideRest();
     	return  ir.agregarReserva(reservaDTO);
     }
@@ -32,7 +35,7 @@ public class MyResource {
     @GET
     @Produces({"application/json", "application/javascript"})
     @JSONP(callback = "eval", queryParam = "jsonpCallback")
-    public ReservaDTO getReservaDTO() {
+    public ReservaDTO getReservaDTO() throws AppException{
     	InsideRest ir = new InsideRest();
     	return  ir.agregarReserva( new ReservaDTO(0,"8:30","9:30","Oscar Amelunge 75520286","15-08-2015"));       
     }

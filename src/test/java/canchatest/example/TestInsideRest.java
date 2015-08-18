@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import cancha.example.InsideRest;
 import cancha.example.ReservaDTO;
+import cancha.example.heroku.AppException;
 import cancha.example.model.HoraReserva;
 import cancha.example.model.Reserva;
 
@@ -15,7 +16,7 @@ public class TestInsideRest {
 
 	
 	@Test
-	public void testCrearHorarioATravezDeInterfaceRest(){
+	public void testCrearHorarioATravezDeInterfaceRest() throws AppException{
 	
 		InsideRest inside = new InsideRest();		
 		assertEquals(inside.agregarReserva(inicializarReserva()).descripcion,inicializarReserva().getDescripcion());
