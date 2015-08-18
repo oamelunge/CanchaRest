@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+                "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+                
+<hibernate-configuration>
+    <session-factory>
+        
+                <!-- MySQL connection
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.username">tester</property>
+        <property name="hibernate.connection.password">tester123</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/testdb</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        -->        
+        
+        <!-- HSQLDB Connection 
+        <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="hibernate.connection.url">jdbc:hsqldb:hsql://localhost/</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+          -->
+          
+            <!-- POSTGRES Connection -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <!-- <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/cancha</property>-->
+        <property name="hibernate.connection.url">jdbc:postgresql://ec2-54-235-80-55.compute-1.amazonaws.com:5432/dpsamiup1llea?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory</property>
+        
+        
+        <property name="hibernate.connection.username">jefcdqrmkafwcw</property>
+        <property name="hibernate.connection.password">DA9jpmbqQ4vXB7BjxuPI6hR7mg</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+                <property name="hibernate.connection.pool_size">1</property>
+                
+                <property name="hibernate.current_session_context_class">thread</property>
+                <property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property> 
+                <property name="hibernate.connection.requireSSL">true</property>
+                <property name="hibernate.show_sql">true</property>     
+                <property name="hibernate.format_sql">true</property>
+                <!--
+                <property name="hibernate.use_sql_comments">true</property>     
+                -->
+                 
+                <!--
+                <property name="hibernate.hbm2ddl.auto">update</property>
+                <property name="hibernate.hbm2ddl.auto">validate</property>
+                <property name="hibernate.hbm2ddl.auto">create</property>
+                <property name="hibernate.hbm2ddl.auto">create-drop</property>
+                -->
+                <property name="hibernate.hbm2ddl.auto">create</property>
+                
+                 <mapping class="cancha.example.model.Reserva"/>
+                 <mapping class="cancha.example.model.HoraReserva"/>
+                <!--
+                <mapping resource="deng.hibernate.test.quick.hbmxml.Simple.hbm.xml"/>
+                <mapping class="deng.hibernate.test.quick.annot.Simple"/>
+                <mapping package="deng.hibernate.test.quick.annot"/>
+                -->
+                        
+    </session-factory>
+</hibernate-configuration>
