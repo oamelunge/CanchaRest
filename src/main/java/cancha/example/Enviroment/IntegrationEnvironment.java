@@ -16,6 +16,6 @@ public class IntegrationEnvironment extends Environment {
 	}
 
 	public static boolean isCurrent() {
-		return new File("src/main/java/integrations.txt").exists();
+		return new File("src/main/java/integration.txt").exists();
 	}
 }

@@ -24,15 +24,18 @@
           
             <!-- POSTGRES Connection -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/cancha</property>
-        <property name="hibernate.connection.username">cancha</property>
-        <property name="hibernate.connection.password">cancha</property>
+        <!-- <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/cancha</property>-->
+        <property name="hibernate.connection.url">jdbc:postgresql://ec2-54-235-80-55.compute-1.amazonaws.com:5432/dpsamiup1llea?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory</property>
+        
+        
+        <property name="hibernate.connection.username">jefcdqrmkafwcw</property>
+        <property name="hibernate.connection.password">DA9jpmbqQ4vXB7BjxuPI6hR7mg</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
                 <property name="hibernate.connection.pool_size">1</property>
                 
                 <property name="hibernate.current_session_context_class">thread</property>
                 <property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property> 
-                
+                <property name="hibernate.connection.requireSSL">true</property>
                 <property name="hibernate.show_sql">true</property>     
                 <property name="hibernate.format_sql">true</property>
                 <!--
